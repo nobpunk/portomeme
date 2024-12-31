@@ -15,6 +15,115 @@
     <title>Portfolio - Memecoin Illustrator</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+     @font-face {
+    font-family: 'CustomFontRegular';
+    src: url('fonts/CustomFont-Regular.woff2') format('woff2'),
+         url('fonts/CustomFont-Regular.woff') format('woff'),
+         url('fonts/CustomFont-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CustomFontBold';
+    src: url('fonts/CustomFont-Bold.woff2') format('woff2'),
+         url('fonts/CustomFont-Bold.woff') format('woff'),
+         url('fonts/CustomFont-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CustomFontItalic';
+    src: url('fonts/CustomFont-Italic.woff2') format('woff2'),
+         url('fonts/CustomFont-Italic.woff') format('woff'),
+         url('fonts/CustomFont-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}   
+        section {
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        color: #ffffff;
+        padding: 80px 20px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
+    body {
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    font-weight: bold;
+}
+
+h1, h2, h3 {
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    font-weight: bold;
+}
+
+p {
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    font-weight: bold;
+}
+
+    #portfolio {
+        background-image: url('https://i.pinimg.com/736x/c2/bc/58/c2bc58864d2b091857b6e8bdfa9470d7.jpg');
+    }
+
+    #social-media {
+        background-image: url('https://i.pinimg.com/736x/b0/c3/13/b0c313c75021719e9075adf7bf74a570.jpg');
+    }
+
+    #download {
+        background-image: url('https://i.pinimg.com/736x/4d/fa/39/4dfa3953d6b692672af8ae5ad112127a.jpg');
+    }
+
+    #live-twitter {
+        background-image: url('https://i.pinimg.com/originals/3c/13/98/3c1398ab791a66876d29d27549e92c70.gif');
+    }
+
+    #contact {
+        background-image: url('https://i.pinimg.com/736x/79/ce/82/79ce82a593b9799595a477dc8af8baf7.jpg');
+    }
+
+    section h3,
+    section p,
+    section a {
+        color: #ffffff;
+    }
+
+    section a {
+        background-color: rgba(255, 255, 255, 0.2);
+        padding: 12px 24px;
+        border-radius: 8px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    section a:hover {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+         #portfolio {
+        background-image: url('https://i.pinimg.com/736x/c2/bc/58/c2bc58864d2b091857b6e8bdfa9470d7.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        color: #ffffff;
+        padding: 80px 20px;
+    }
+
+    #portfolio h3 {
+        color: #ffc8dd; /* Warna judul di atas gambar */
+    }
+
+    #portfolio .portfolio-item {
+        background-color: rgba(0, 0, 0, 0.7); /* Transparansi untuk kontras */
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    #portfolio .portfolio-item h4,
+    #portfolio .portfolio-item p {
+        color: #ffffff;
+    }
         html {
             scroll-behavior: smooth;
         }
@@ -26,7 +135,7 @@
         }
 
         .fade-in {
-            animation: fadeIn 2s ease-in-out;
+            animation: fadeIn 1s ease-in-out;
         }
 
         @keyframes fadeIn {
@@ -35,7 +144,7 @@
             }
 
             to {
-                opacity: 5;
+                opacity: 1;
             }
         }
 
@@ -53,8 +162,8 @@
             padding: 12px 24px;
             font-size: 16px;
             font-weight: bold;
-            color: #0c0075;
-            background: linear-gradient(90deg, #FFC8DD, #04f7ff);
+            color: #e9e9e9;
+            background: linear-gradient(90deg, #3a3a3a, #838383);
             border-radius: 8px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
@@ -66,7 +175,7 @@
 
         body {
             font-family: 'lexar', sans-serif;
-            background-color: #C5ADED;
+            background-color: #2c2c2c;
             color: #161616;
         }
 
@@ -92,7 +201,7 @@
         }
 
         nav {
-            background-color: #4b2b7e;
+            background-color: #414141;
         }
 
         .portfolio-item {
@@ -147,6 +256,7 @@
 <body>
     <!-- Navbar -->
     <nav class="p-4 fixed w-full top-0 z-10 shadow-md">
+        <div></div>
         <div class="container mx-auto flex justify-between items-center">
             <h1 class="text-2xl font-bold">NobpaArt</h1>
             <a href="#contact" class="btn">Chat me </a>
@@ -166,8 +276,8 @@
             <h3 class="text-4xl font-bold text-center mb-12">Portfolio Gallery</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="portfolio-item rounded-lg shadow-lg cursor-pointer"
-                    onclick="showPopup('Project 1', 'A brief description of this project.', 'https://i.pinimg.com/736x/b4/0b/89/b40b89dd9b24398b6dd0df2f0a6af831.jpg')">
-                    <img src="https://i.pinimg.com/736x/b4/0b/89/b40b89dd9b24398b6dd0df2f0a6af831.jpg" alt="Project 1"
+                    onclick="showPopup('Project 1', 'A brief description of this project.', 'https://i.pinimg.com/originals/3c/13/98/3c1398ab791a66876d29d27549e92c70.gif')">
+                    <img src="https://i.pinimg.com/originals/3c/13/98/3c1398ab791a66876d29d27549e92c70.gif" alt="Project 1"
                         class="rounded-t-lg" loading="lazy">
                     <div class="p-4">
                         <h4 class="text-lg font-bold">Project 1</h4>
@@ -179,8 +289,8 @@
                     <img src="https://pbs.twimg.com/media/Gf5fn3GWUAALGHF?format=jpg&name=large" alt="Project 2"
                         class="rounded-t-lg" loading="lazy">
                     <div class="p-4">
-                        <h4 class="text-lg font-bold">Project 2</h4>
-                        <p>Another project description.</p>
+                        <h4 class="text-lg font-bold">illustrations</h4>
+                        <p>coool broo.</p>
                     </div>
                 </div>
                 <div class="portfolio-item rounded-lg shadow-lg cursor-pointer"
@@ -188,8 +298,8 @@
                     <img src="https://pbs.twimg.com/media/GfqKMadWkAAQ0Ai?format=jpg&name=large" alt="Project 3"
                         class="rounded-t-lg" loading="lazy">
                     <div class="p-4">
-                        <h4 class="text-lg font-bold">Project 3</h4>
-                        <p>Third project description.</p>
+                        <h4 class="text-lg font-bold">fucking shit</h4>
+                        <p>very very coool</p>
                     </div>
                 </div>
                 <div class="portfolio-item rounded-lg shadow-lg cursor-pointer"
@@ -211,8 +321,8 @@
                     </div>
                 </div>
                 <div class="portfolio-item rounded-lg shadow-lg cursor-pointer"
-                    onclick="showPopup('Project 6', 'Sixth project description.', 'https://via.placeholder.com/300')">
-                    <img src="https://via.placeholder.com/300" alt="Project 6" class="rounded-t-lg" loading="lazy">
+                    onclick="showPopup('Project 6', 'Sixth project description.', 'https://i.pinimg.com/736x/a9/7c/69/a97c69f92ddf669a17062ebb60594f40.jpg')">
+                    <img src="https://i.pinimg.com/736x/a9/7c/69/a97c69f92ddf669a17062ebb60594f40.jpg" alt="Project 6" class="rounded-t-lg" loading="lazy">
                     <div class="p-4">
                         <h4 class="text-lg font-bold">Project 6</h4>
                         <p>Sixth project description.</p>
@@ -227,9 +337,9 @@
             <h3 class="text-4xl font-bold mb-6">Follow Me</h3>
             <p class="text-lg">Stay updated with my latest projects and artworks on social media.</p>
             <div class="flex justify-center gap-6 mt-4">
-                <a href="https://twitter.com" target="_blank" class="btn">Twitter</a>
-                <a href="https://instagram.com" target="_blank" class="btn">Instagram</a>
-                <a href="https://linkedin.com" target="_blank" class="btn">LinkedIn</a>
+                <a href="https://twitter.com/NobpaArt" target="_blank" class="btn">Twitter</a>
+                <a href="https://instagram.com/nazdxx" target="_blank" class="btn">Instagram</a>
+                <a href="https://medium.com/ahmadnova905" target="_blank" class="btn">medium</a>
             </div>
         </div>
     </section>
@@ -244,13 +354,13 @@
     <!-- Live Twitter Section -->
     <section id="live-twitter" class="bg-gray-900">
         <div class="container mx-auto text-center">
-            <h3 class="text-4xl font-bold mb-6">Live from Twitter</h3>
+            <h3 class="text-4xl font-bold mb-6">my post </h3>
             <p class="text-lg mb-6">Catch the latest updates and posts directly from my Twitter feed.</p>
             <div class="flex justify-center">
                 <blockquote class="twitter-tweet">
                     <p lang="en" dir="ltr">Here is a sample tweet to show how embedded tweets will look on your website.
                     </p>&mdash; Memecoin Illustrator <a
-                        href="https://twitter.com/NobpaArt/status/1795166317181387074">December 31, 2024</a>
+                        href="https://twitter.com/NobpaArt/status/1795166317181387074"></a>
                 </blockquote>
             </div>
         </div>
@@ -258,9 +368,9 @@
     <!-- Contact Section -->
     <section id="contact" class="bg-gray-800">
         <div class="container mx-auto text-center">
-            <h3 class="text-4xl font-bold mb-6">Get in Touch</h3>
+            <h3 class="text-4xl font-bold mb-6">chat me</h3>
             <p class="text-lg">Contact me directly via Telegram for your next project.</p>
-            <a href="https://t.me/your_telegram_username" target="_blank" class="btn mt-4">Chat on Telegram</a>
+            <a href="https://t.me/nobpa" target="_blank" class="btn mt-4">Chat on Telegram</a>
         </div>
     </section>
     <!-- Footer -->
